@@ -14,7 +14,7 @@ const AppLayout = () => {
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
         <Container fluid>
           <Navbar.Brand href="#">
-            <Link to = "/" ><img src="Logo.png" width={100}/></Link>
+            <Link to = "/" ><img src="Logo.png" width={100} alt=""/></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
