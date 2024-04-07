@@ -9,11 +9,11 @@ const MovieCard = ({ movie }) => {
         style={{
           backgroundImage:
             "url(" +
-            `https://media.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}` +
+            `https://media.themoviedb.org/t/p/w300_and_h450_bestv2${movie?.poster_path}` +
             ")",
         }}
       >
-        <div className="card-title">{movie.title}</div>
+        <div className="card-title">{movie?.title}</div>
       </div>
     </div>
   );
