@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3em;
+  position:relative;
 }
 
 .banner-area:before {
@@ -21,7 +22,8 @@
   flex-direction: column;
   justify-content: end;
   height: 100%;
-  padding-top: 22em;
+  position: absolute; 
+  bottom: 40px;
 }
 
 .banner-text-area h1 {
@@ -30,22 +32,32 @@
   line-height: 1.1;
 }
 
+.banner-text-area p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
 @media (max-width: 1024px) {
+  
   .banner-text-area {
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: end;
     height: 100%;
-    padding-top: 16em;
+    position: absolute; 
+    bottom: 0px;
   }
   .banner-text-area h1 {
     font-size: 2rem;
     font-weight: 700;
   }
   .banner-text-area p {
-    font-size: 0.8rem;
     font-weight: 200;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 

@@ -39,7 +39,12 @@ const Banner = () => {
   }
 
   return (
-    <Carousel responsive={responsive}>
+    <Carousel
+      responsive={responsive}  
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={2000}
+    >
       <div
         style={{
           backgroundImage:
