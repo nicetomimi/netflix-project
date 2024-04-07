@@ -2,3 +2,8 @@
     font-size: 2.5rem;
     font-weight: 700;
 }
+
+.carousel-area{
+    display: flex;
+    justify-content: center;
+}

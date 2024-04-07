@@ -5,7 +5,6 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Outlet } from "react-router-dom" //라우트 안에있는 자식들 가져와주는 
-import { Link } from "react-router-dom";
 import "./AppLayout.style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -16,8 +15,8 @@ const AppLayout = () => {
     <div>
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
         <Container justify-content-md>
-          <Navbar.Brand href="#">
-            <Link to = "/" ><img src="Logo.png" width={150} alt=""/></Link>
+          <Navbar.Brand href="/">
+            <img src="Logo.png" width={150} alt=""/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
