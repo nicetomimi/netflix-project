@@ -5,6 +5,7 @@ import "./Banner.style.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Container from "react-bootstrap/Container";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const responsive = {
   superLargeDesktop: {
@@ -26,20 +27,19 @@ const responsive = {
   },
 };
 
-
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
   console.log("popular-b", data);
 
   if (isLoading) {
-    <h1>로딩중</h1>;
+    return <ClipLoader color="#000000" size={150} />;
   }
   if (isError) {
-    <Alert variant="danger">{error.message}</Alert>;
+    return <Alert variant="danger">{error.message}</Alert>;
   }
 
   return (
-    <Carousel responsive={responsive} >
+    <Carousel responsive={responsive}>
       <div
         style={{
           backgroundImage:
@@ -50,10 +50,10 @@ const Banner = () => {
         className="banner-area"
       >
         <Container>
-        <div className="banner-text-area">
-          <h1>{data?.results[0].title}</h1>
-          <p>{data?.results[0].overview}</p>
-        </div>
+          <div className="banner-text-area">
+            <h1>{data?.results[0].title}</h1>
+            <p>{data?.results[0].overview}</p>
+          </div>
         </Container>
       </div>
 
@@ -67,10 +67,10 @@ const Banner = () => {
         className="banner-area"
       >
         <Container>
-        <div className="banner-text-area">
-          <h1>{data?.results[4].title}</h1>
-          <p>{data?.results[4].overview}</p>
-        </div>
+          <div className="banner-text-area">
+            <h1>{data?.results[4].title}</h1>
+            <p>{data?.results[4].overview}</p>
+          </div>
         </Container>
       </div>
 
@@ -84,10 +84,10 @@ const Banner = () => {
         className="banner-area"
       >
         <Container>
-        <div className="banner-text-area">
-          <h1>{data?.results[5].title}</h1>
-          <p>{data?.results[5].overview}</p>
-        </div>
+          <div className="banner-text-area">
+            <h1>{data?.results[5].title}</h1>
+            <p>{data?.results[5].overview}</p>
+          </div>
         </Container>
       </div>
     </Carousel>

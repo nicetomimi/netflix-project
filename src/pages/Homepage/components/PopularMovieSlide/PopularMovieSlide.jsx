@@ -6,6 +6,7 @@ import Alert from "react-bootstrap/Alert";
 import Container from "react-bootstrap/Container";
 import MovieCard from "../MovieCard/MovieCard";
 import "./PopularMovieSlide.style.css";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const responsive = {
   desktop: {
@@ -27,28 +28,28 @@ const PopularMovieSlide = () => {
   console.log("popular-c", data);
 
   if (isLoading) {
-    <h1>로딩중</h1>;
+    return <ClipLoader color="#000000" size={150} />
   }
   if (isError) {
-    <Alert variant="danger">{error.message}</Alert>;
+    return <Alert variant="danger">{error.message}</Alert>;
   }
 
   return (
     <Container justify-content-md>
       <div className="title">Popular Movies</div>
+
       <Carousel
         infinite={true}
         centerMode={true}
         itemClass="carousel-item-padding-40-px"
         containerClass="carousel-container"
         responsive={responsive}
-      >
-        <div className="carousel-area">
-          {data?.results.map((movie, index) => (
+      >  
+       {data.results.map((movie, index) => (
             <MovieCard movie={movie} key={index} />
-          ))}
-        </div>
+          )) }
       </Carousel>
+      
     </Container>
   );
 };
