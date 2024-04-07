@@ -6,6 +6,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Outlet } from "react-router-dom" //라우트 안에있는 자식들 가져와주는 
 import { Link } from "react-router-dom";
+import "./AppLayout.style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 
 const AppLayout = () => {
@@ -14,7 +17,7 @@ const AppLayout = () => {
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
         <Container fluid>
           <Navbar.Brand href="#">
-            <Link to = "/" ><img src="Logo.png" width={200} alt=""/></Link>
+            <Link to = "/" ><img src="Logo.png" width={150} alt=""/></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -23,8 +26,8 @@ const AppLayout = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Link to = "/" > <Nav.Link href="#action1">Home</Nav.Link></Link>
-              <Link to = "/movies" > <Nav.Link href="#action2">Movies</Nav.Link></Link>
+               <Nav.Link href="/">Home</Nav.Link>
+               <Nav.Link href="/movies">Movies</Nav.Link>
             </Nav>
             <Form className="d-flex" >
               <Form.Control
@@ -33,7 +36,7 @@ const AppLayout = () => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="danger">Search</Button>
+              <Button variant="danger"> <FontAwesomeIcon icon={faSearch} /></Button>
             </Form>
           </Navbar.Collapse>
         </Container>

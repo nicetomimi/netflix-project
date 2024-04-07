@@ -1,0 +1,53 @@
+.banner-area {
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-area:before {
+  content: "";
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
+  left: 0;
+  height: 60vh;
+  width: 100%;
+}
+
+.banner-text-area {
+  width: 42%;
+  padding-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+}
+
+.banner-text-area h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .banner-text-area {
+    width: 90%;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+  }
+  .banner-text-area h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .banner-text-area p {
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+}
+
+/* 앞으로 정렬하는거 (banner-text-area 에있는 > 모든아이템을 > 위로보내준다 z-index */
+.banner-text-area > * {
+  z-index: 2;
+}
