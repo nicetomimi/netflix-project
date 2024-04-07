@@ -4,6 +4,7 @@ import Alert from "react-bootstrap/Alert";
 import "./Banner.style.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Container from "react-bootstrap/Container";
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
@@ -48,10 +49,12 @@ const Banner = () => {
         }}
         className="banner-area"
       >
+        <Container>
         <div className="banner-text-area">
           <h1>{data?.results[0].title}</h1>
           <p>{data?.results[0].overview}</p>
         </div>
+        </Container>
       </div>
 
       <div
@@ -63,10 +66,12 @@ const Banner = () => {
         }}
         className="banner-area"
       >
+        <Container>
         <div className="banner-text-area">
           <h1>{data?.results[1].title}</h1>
           <p>{data?.results[1].overview}</p>
         </div>
+        </Container>
       </div>
 
       <div
@@ -78,10 +83,12 @@ const Banner = () => {
         }}
         className="banner-area"
       >
+        <Container>
         <div className="banner-text-area">
           <h1>{data?.results[2].title}</h1>
           <p>{data?.results[2].overview}</p>
         </div>
+        </Container>
       </div>
     </Carousel>
   );

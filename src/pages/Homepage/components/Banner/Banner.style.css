@@ -3,6 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 3em;
 }
 
 .banner-area:before {
@@ -16,11 +17,11 @@
 
 .banner-text-area {
   width: 42%;
-  padding-left: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
   height: 100%;
+  padding-top: 22em;
 }
 
 .banner-text-area h1 {
@@ -31,11 +32,11 @@
 @media (max-width: 1024px) {
   .banner-text-area {
     width: 90%;
-    padding-left: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: end;
     height: 100%;
+    padding-top: 16em;
   }
   .banner-text-area h1 {
     font-size: 2rem;

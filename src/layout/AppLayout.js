@@ -15,7 +15,7 @@ const AppLayout = () => {
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
-        <Container fluid>
+        <Container justify-content-md>
           <Navbar.Brand href="#">
             <Link to = "/" ><img src="Logo.png" width={150} alt=""/></Link>
           </Navbar.Brand>
