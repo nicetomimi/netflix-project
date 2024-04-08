@@ -1,13 +1,13 @@
 import React from "react";
-import { usePopularMoviesQuery } from "../../../../hooks/UsePopularMovies";
+import { useRatedMoviesQuery } from "../../../../hooks/UseTopRatedMovies";
 import "react-multi-carousel/lib/styles.css";
 import Alert from "react-bootstrap/Alert";
 import ClipLoader from "react-spinners/ClipLoader";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../constants/responsive";
 
-const PopularMovieSlide = () => {
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
+const RatedMovieSlide = () => {
+  const { data, isLoading, isError, error } = useRatedMoviesQuery();
 
   if (isLoading) {
     return <ClipLoader color="#000000" size={150} />;
@@ -19,11 +19,11 @@ const PopularMovieSlide = () => {
   return (
     <div>
       <MovieSlider
-        title="Popular Movies"
+        title="Top Rated Movies"
         movies={data.results}
         responsive={responsive}
       />
          </div>
   );
 };
-export default PopularMovieSlide;
+export default RatedMovieSlide;
