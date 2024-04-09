@@ -4,19 +4,19 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Outlet } from "react-router-dom" //라우트 안에있는 자식들 가져와주는 
+import { Outlet } from "react-router-dom"; //라우트 안에있는 자식들 가져와주는
 import "./AppLayout.style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
+import Footer from "../pages/Homepage/components/Footer/Footer";
 
 const AppLayout = () => {
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
+      <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top" >
         <Container justify-content-md>
           <Navbar.Brand href="/">
-            <img src="Logo.png" width={150} alt=""/>
+            <img src="Logo.png" width={150} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -25,23 +25,27 @@ const AppLayout = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-               <Nav.Link href="/">Home</Nav.Link>
-               <Nav.Link href="/movies">Movies</Nav.Link>
+              <Nav.Link href="/movies">Movies</Nav.Link>
+              <Nav.Link href="/tv">TV Series</Nav.Link>
             </Nav>
-            <Form className="d-flex" >
+            <Form className="d-flex">
               <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="danger"> <FontAwesomeIcon icon={faSearch} /></Button>
+              <Button variant="danger">
+                {" "}
+                <FontAwesomeIcon icon={faSearch} />
+              </Button>
             </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       <Outlet></Outlet>
+      <Footer />
     </div>
   );
 };

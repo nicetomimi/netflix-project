@@ -8,6 +8,7 @@ import { responsive } from "../../../../constants/responsive";
 
 const UpcomingMovieSlide = () => {
   const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
+  console.log("upcoming",data)
 
   if (isLoading) {
     return <ClipLoader color="#000000" size={150} />;

@@ -8,6 +8,7 @@ import { responsive } from "../../../../constants/responsive";
 
 const RatedMovieSlide = () => {
   const { data, isLoading, isError, error } = useRatedMoviesQuery();
+  console.log("rated",data)
 
   if (isLoading) {
     return <ClipLoader color="#000000" size={150} />;

@@ -29,7 +29,7 @@ const responsive = {
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  console.log("popular-b", data);
+  console.log("banner", data);
 
   if (isLoading) {
     return <ClipLoader color="#000000" size={150} />;
@@ -49,7 +49,7 @@ const Banner = () => {
         style={{
           backgroundImage:
             "url(" +
-            `https://media.themoviedb.org/t/p/w533_and_h300_bestv2${data?.results[0].poster_path}` +
+            `https://media.themoviedb.org/t/p/w1920_and_h800_bestv2${data?.results[0].poster_path}` +
             ")",
         }}
         className="banner-area"
@@ -66,15 +66,15 @@ const Banner = () => {
         style={{
           backgroundImage:
             "url(" +
-            `https://media.themoviedb.org/t/p/w533_and_h300_bestv2${data?.results[4].poster_path}` +
+            `https://media.themoviedb.org/t/p/w1920_and_h800_bestv2${data?.results[3].poster_path}` +
             ")",
         }}
         className="banner-area"
       >
         <Container>
           <div className="banner-text-area">
-            <h1>{data?.results[4].title}</h1>
-            <p>{data?.results[4].overview}</p>
+            <h1>{data?.results[3].title}</h1>
+            <p>{data?.results[3].overview}</p>
           </div>
         </Container>
       </div>
@@ -83,15 +83,15 @@ const Banner = () => {
         style={{
           backgroundImage:
             "url(" +
-            `https://media.themoviedb.org/t/p/w533_and_h300_bestv2${data?.results[5].poster_path}` +
+            `https://media.themoviedb.org/t/p/w1920_and_h800_bestv2${data?.results[4].poster_path}` +
             ")",
         }}
         className="banner-area"
       >
         <Container>
           <div className="banner-text-area">
-            <h1>{data?.results[5].title}</h1>
-            <p>{data?.results[5].overview}</p>
+            <h1>{data?.results[4].title}</h1>
+            <p>{data?.results[4].overview}</p>
           </div>
         </Container>
       </div>

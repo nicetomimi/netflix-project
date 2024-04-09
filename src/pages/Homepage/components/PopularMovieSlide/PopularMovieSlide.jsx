@@ -8,7 +8,7 @@ import { responsive } from "../../../../constants/responsive";
 
 const PopularMovieSlide = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-
+  
   if (isLoading) {
     return <ClipLoader color="#000000" size={150} />;
   }
