@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+
+.active > *{
+    color: rgb(255, 255, 255) !important;
+    background: #e50404 !important;
+}
+
+.page-link-style{
+    color: white;
+    background: white;
+}
+
+.genre-btn{
+    margin-top: 1rem;
+}
