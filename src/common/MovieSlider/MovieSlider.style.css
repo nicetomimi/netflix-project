@@ -3,7 +3,7 @@
   font-weight: 700;
 }
 
-.carousel-area {
-  display: flex;
-  justify-content: center;
+.carousel-item-padding-40-px{
+  margin: 1em;
 }
+

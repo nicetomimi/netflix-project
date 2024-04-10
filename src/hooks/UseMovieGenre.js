@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query'
 import api from '../utils/Api'
 
+
 const fetchMovieGenre = () => {
-    return api.get('./genre/movie/list')
+    return api.get('./genre/movie/list?language=ko-KR')
 }
+
 
 export const useMovieGenreQuery= () => {
   return useQuery({
