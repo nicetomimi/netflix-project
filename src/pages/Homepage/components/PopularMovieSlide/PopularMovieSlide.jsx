@@ -19,7 +19,7 @@ const PopularMovieSlide = () => {
   return (
     <div>
       <MovieSlider
-        title="Popular Movies"
+        title="실시간 인기 영화"
         movies={data.results}
         responsive={responsive}
       />

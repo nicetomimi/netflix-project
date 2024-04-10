@@ -20,7 +20,7 @@ const UpcomingMovieSlide = () => {
   return (
     <div>
       <MovieSlider
-        title="Upcoming Movies"
+        title="상영 예정작"
         movies={data.results}
         responsive={responsive}
       />

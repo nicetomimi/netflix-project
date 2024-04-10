@@ -66,15 +66,15 @@ const Banner = () => {
         style={{
           backgroundImage:
             "url(" +
-            `https://media.themoviedb.org/t/p/w1920_and_h800_bestv2${data?.results[3].poster_path}` +
+            `https://media.themoviedb.org/t/p/w1920_and_h800_bestv2${data?.results[1].poster_path}` +
             ")",
         }}
         className="banner-area"
       >
         <Container>
           <div className="banner-text-area">
-            <h1>{data?.results[3].title}</h1>
-            <p>{data?.results[3].overview}</p>
+            <h1>{data?.results[1].title}</h1>
+            <p>{data?.results[1].overview}</p>
           </div>
         </Container>
       </div>
@@ -83,15 +83,15 @@ const Banner = () => {
         style={{
           backgroundImage:
             "url(" +
-            `https://media.themoviedb.org/t/p/w1920_and_h800_bestv2${data?.results[4].poster_path}` +
+            `https://media.themoviedb.org/t/p/w1920_and_h800_bestv2${data?.results[2].poster_path}` +
             ")",
         }}
         className="banner-area"
       >
         <Container>
           <div className="banner-text-area">
-            <h1>{data?.results[4].title}</h1>
-            <p>{data?.results[4].overview}</p>
+            <h1>{data?.results[2].title}</h1>
+            <p>{data?.results[2].overview}</p>
           </div>
         </Container>
       </div>
