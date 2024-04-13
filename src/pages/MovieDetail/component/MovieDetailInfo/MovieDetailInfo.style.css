@@ -1,0 +1,38 @@
+.poster-image{
+border-radius: 20px;
+margin-bottom: 2em;
+margin-top: -1em;
+}
+
+.info-area{
+    position: relative;
+    top: -25em;
+}
+.tagline{
+    font-size: 2rem;
+    margin-top: 1em;
+}
+.title{
+    font-size: 4rem;
+}
+
+.sub-title{
+    font-size: 1.5rem;
+}
+
+.summary{
+    font-size: 1.1rem;
+}
+
+.genre-area{
+    margin-bottom: -1.2em;
+    font-size: 1.5rem;
+}
+
+.genre{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    list-style-type: none;
+    padding:0;
+  }

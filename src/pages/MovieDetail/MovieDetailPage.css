@@ -1,3 +1,17 @@
-body {
-    background-color: black;
-}
+.banner-area {
+    height: 65vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3em;
+    position:relative;
+  }
+  
+  .banner-area:before {
+    content: "";
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    left: 0;
+    height: 65vh;
+    width: 100%;
+  }

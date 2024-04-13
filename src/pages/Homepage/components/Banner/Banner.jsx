@@ -1,11 +1,11 @@
 import React from "react";
 import { usePopularMoviesQuery } from "../../../../hooks/UsePopularMovies";
-import Alert from "react-bootstrap/Alert";
 import "./Banner.style.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Container from "react-bootstrap/Container";
-import ClipLoader from "react-spinners/ClipLoader";
+import LoadingSpinner from "../../../../common/LoadingSpinner/LoadingSpinner";
+import Alert from "react-bootstrap/Alert";
 
 const responsive = {
   superLargeDesktop: {
@@ -32,7 +32,7 @@ const Banner = () => {
   console.log("banner", data);
 
   if (isLoading) {
-    return <ClipLoader color="#000000" size={150} />;
+    return <LoadingSpinner />;
   }
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;

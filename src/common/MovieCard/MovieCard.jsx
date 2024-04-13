@@ -4,6 +4,7 @@ import Badge from "react-bootstrap/Badge";
 import { useMovieGenreQuery } from "../../hooks/UseMovieGenre";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery(); //여기서 id 보여지니까 여기에 data 불러오고
@@ -16,10 +17,15 @@ const MovieCard = ({ movie }) => {
     return genreNameList;
   }; //id에 name 보여지는 함수 만들어 주기
 
+  const navigate = useNavigate();
+  const movieDetailPage = (id) => {
+    navigate(`/movies/${id}`);
+  };
   return (
     <div className="card-wrap">
       <div
         className="card-area"
+        onClick={() => movieDetailPage(movie?.id)}
         style={{
           backgroundImage:
             "url(" +
@@ -37,17 +43,17 @@ const MovieCard = ({ movie }) => {
               {movie.vote_average.toFixed(1)}
             </div>
           </div>
-          
+
           <div>
-                {" "}
-                {movie.adult ? (
-                  <Badge bg="danger">18</Badge>
-                ) : (
-                  <Badge bg="warning" text="dark">
-                    ALL
-                  </Badge>
-                )}
-              </div>
+            {" "}
+            {movie.adult ? (
+              <Badge bg="danger">18</Badge>
+            ) : (
+              <Badge bg="warning" text="dark">
+                ALL
+              </Badge>
+            )}
+          </div>
 
           <div className="sub-info">
             <ul className="genre">
