@@ -46,16 +46,7 @@
     position: absolute;
     bottom:0;
 }
-@media (min-width:465px) and (max-width:1024px) {
-    .detail-watch-btn{
-        font-size:1rem;
-    }
-}
-@media (min-width:1025px){
-    .detail-watch-btn{
-        font-size:1.2rem;
-    }
-}
+
 @media (min-width: 576px){
     .modal-dialog {
         width:90%;

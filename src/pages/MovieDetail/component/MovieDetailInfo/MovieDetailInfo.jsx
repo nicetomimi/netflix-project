@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import MovieModal from "../MovieModal/MovieModal";
 import { useMovieVideoQuery } from "../../../../hooks/UseMovieVideo";
+import MovieCredit from "../MovieCredit/MovieCredit";
+import MovieReview from "../MovieReview/MovieReview";
+import RelatedMovie from "../RelatedMovie/RelatedMovie";
 
 const MovieDetailInfo = ({ movie, id }) => {
   const {data: video} = useMovieVideoQuery({id});
@@ -52,6 +55,10 @@ console.log("video",video)
           <div className="summary">{movie.overview}</div>
           <MovieModal video={video}/>
         </Col>
+        <MovieCredit/>
+        <MovieReview/>
+        <RelatedMovie/>
+
       </Row>
     </Container>
   );

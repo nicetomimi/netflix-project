@@ -13,7 +13,7 @@ const MovieDetailPage = () => {
     isError,
     error,
   } = useMovieDetailQuery({ id });
-console.log("detail",movie)
+  console.log("detail", movie);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -32,7 +32,7 @@ console.log("detail",movie)
         }}
         className="banner-area"
       ></div>
-      <MovieDetailInfo movie={movie} id={id}/>
+      <MovieDetailInfo movie={movie} id={id} />
     </div>
   );
 };

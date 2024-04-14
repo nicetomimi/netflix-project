@@ -1,0 +1,14 @@
+.credit-title {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+.more-btn{
+    margin-top: 0.5em;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+}

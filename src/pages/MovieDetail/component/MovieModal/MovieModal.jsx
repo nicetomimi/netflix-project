@@ -14,7 +14,6 @@ const MovieModal = ({video}) => {
             예고편 확인하기
         </button>
         <div
-        className="modal show"
         style={{ display: 'block', position: 'initial' }}
         >
         <Modal show={show}

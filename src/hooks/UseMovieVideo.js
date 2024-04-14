@@ -3,7 +3,7 @@ import api from '../utils/Api'
 
 
 const fetchMovieVideo = ({id}) => {
-    return api.get(`/movie/${id}/videos?language=ko-KR`)
+    return api.get(`./movie/${id}/videos?language=ko-KR`)
 }
 
 
