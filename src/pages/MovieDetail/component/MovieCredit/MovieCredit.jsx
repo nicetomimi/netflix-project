@@ -15,7 +15,7 @@ const MovieCredit = () => {
       <div className="credit-title">감독/출연</div>
       
         <Row>
-          {credit?.cast.slice(0,12).map((item, index) => (
+          {credit?.cast.slice(0,12).map ((item, index) => (
             <Col lg={1} xs={6} key={index}>
               <CreditCard item={item} />
             </Col>
